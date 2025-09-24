@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int test; cin >> test;
+    cin.ignore();
+    while(test--){
+        string s;
+        getline(cin, s);
+        for(int i = 0; i < s.length(); i++){
+            s[i] = tolower(s[i]);
+        }
+        stringstream ss(s);
+        string temp;
+        vector<string> email;
+        while(ss >> temp){
+            email.push_back(temp);
+        }
+        cout << email[email.size() - 1];
+        for(int i = 0; i < email.size() - 1; i++){
+            cout << email[i][0];
+        }
+        cout << "@gmail.com" << endl;
+    }
+}
