@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-  int test; cin >> test;
-  cin.ignore();
-  while(test--){
-    string s; getline(cin, s);
-    string c; getline(cin, c);
-    stringstream ss(s);
-    string temp;
-    while(ss >> temp){
-      if(temp != c) cout << temp << " ";
+    int test; cin >> test;
+    cin.ignore();
+    while(test--){
+        string s, c;
+        getline(cin, s);
+        getline(cin, c);
+        stringstream ss(s);
+        string temp;
+        while(ss >> temp){
+            if(temp != c) cout << temp << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
-  }
 }
