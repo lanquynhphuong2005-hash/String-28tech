@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int test; cin >> test;
+    cin.ignore();
+    while(test--){
+        string s; getline(cin, s);
+        for(char &x : s) x = tolower(x);
+        stringstream ss(s);
+        string temp; 
+        vector<string> name;
+        while(ss >> temp){
+            name.push_back(temp);
+        }
+        for(int i = 0; i < name[name.size() - 1].size(); i++){
+            name[name.size() - 1][i] = toupper(name[name.size() - 1][i]);
+        }
+        cout << name[name.size() - 1] << ", ";
+        for(int i = 0; i < name.size() - 1; i++){
+            name[i][0] = toupper(name[i][0]);
+            cout << name[i] << " ";
+        }
+        cout << endl;
+    }
+}
