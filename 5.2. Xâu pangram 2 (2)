@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+// int main(){
+//     int t; cin >> t;
+//     cin.ignore();
+//     while(t--)
+//     {string s;
+//     int k;
+//     cin >> s;
+//     cin >> k;
+//     set<char> se;
+//     for(int i=0; i< s.size(); i++){
+//         if(isalpha(s[i]))
+//        { se.insert(tolower(s[i]));}
+//     }
+//     if(26-se.size()<=k) cout << "1\n";
+//     else cout << "0\n";}
+//     }
+
+
+
+
+
+    int main(){
+    int t; cin >> t;
+    cin.ignore();
+    while(t--)
+    {string s;
+    int k;
+    cin >> s;
+    cin >> k;
+    map<char, int> mp;
+    for(char &x : s){
+        mp[x]++;
+    }
+    int count =0;
+    for(int i = 'a'; i<='z'; i++){
+        if(mp[i]==0){
+            count ++;
+        }
+    }
+    if(count > k) cout << "0\n";
+    else cout << "1\n";
+
+    }
+
+   
+    }
