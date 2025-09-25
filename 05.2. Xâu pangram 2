@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int test; cin >> test;
+    while(test--){
+        string s; cin >> s;
+        int k; cin >> k;
+        int x = s.length();
+        set<int> count;
+        for(int x : s){
+            if(isalpha(x)) count.insert(x);
+        }
+        if(k < 26 - count.size()) cout << "0";
+        else cout << "1";
+        cout << endl;
+    }
+}
